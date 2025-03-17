@@ -5,7 +5,7 @@ import "katex/dist/katex.min.css";
 function Katex({ texExpression, className }: { texExpression: string, className: string }) {
   const containerRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
-    katex.render(texExpression, containerRef.current as HTMLInputElement);
+    katex.render(texExpression, containerRef.current as HTMLInputElement, { throwOnError: false, displayMode: true });
   }, [texExpression]);
 
   return <div ref={containerRef} className={className} />;
