@@ -27,11 +27,6 @@ function App() {
         texExpression={expression}
         className="katex"
       />
-      <br />
-      <button onClick={() => {
-        generateChallengeExpression()
-      }}>Generate Challenge</button>
-      <br />
       <InputField
         expression={expression} onMatch={generateChallengeExpression}
       />
